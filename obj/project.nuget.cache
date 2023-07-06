@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "kJSlR+6B7rcqLZ9gfeJzPPPducPpJ8Mdobl0UfIlNu/HkSgUZxZQTS/Doda/uGEwSRHDnLzQ6dXPNx0gcg0v3Q==",
+  "success": true,
+  "projectFilePath": "E:\\projects\\ssid_lldp\\ssid_lldp\\ssid_lldp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\rwk\\.nuget\\packages\\system.codedom\\7.0.0\\system.codedom.7.0.0.nupkg.sha512",
+    "C:\\Users\\rwk\\.nuget\\packages\\system.management\\7.0.2\\system.management.7.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
