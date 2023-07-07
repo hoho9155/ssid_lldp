@@ -17,3 +17,4 @@ E:\projects\ssid_lldp\ssid_lldp\bin\Debug\net6.0\System.CodeDom.dll
 E:\projects\ssid_lldp\ssid_lldp\bin\Debug\net6.0\System.Management.dll
 E:\projects\ssid_lldp\ssid_lldp\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Management.dll
 E:\projects\ssid_lldp\ssid_lldp\obj\Debug\net6.0\ssid_lldp.csproj.CopyComplete
+E:\projects\ssid_lldp\ssid_lldp\bin\Debug\net6.0\SimpleWifi.dll

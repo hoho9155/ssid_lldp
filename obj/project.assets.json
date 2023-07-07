@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "SimpleWifi.netstandard/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/SimpleWifi.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SimpleWifi.dll": {}
+        }
+      },
       "System.CodeDom/7.0.0": {
         "type": "package",
         "compile": {
@@ -38,6 +47,20 @@
     }
   },
   "libraries": {
+    "SimpleWifi.netstandard/2.0.0": {
+      "sha512": "lJuk2zjX4snKbrxfDnDEwYb8dTFR/UbyMb9umljexOP1nuXjdYXNX3T2+zrdxZue359ZqvHC8aAAGkgWS6PFFw==",
+      "type": "package",
+      "path": "simplewifi.netstandard/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "lib/netstandard2.0/SimpleWifi.dll",
+        "lib/netstandard2.0/SimpleWifi.xml",
+        "simplewifi.netstandard.2.0.0.nupkg.sha512",
+        "simplewifi.netstandard.nuspec"
+      ]
+    },
     "System.CodeDom/7.0.0": {
       "sha512": "GLltyqEsE5/3IE+zYRP5sNa1l44qKl9v+bfdMcwg+M9qnQf47wK3H0SUR/T+3N4JEQXF3vV4CSuuo0rsg+nq2A==",
       "type": "package",
@@ -96,6 +119,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "SimpleWifi.netstandard >= 2.0.0",
       "System.Management >= 7.0.2"
     ]
   },
@@ -144,6 +168,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "SimpleWifi.netstandard": {
+            "target": "Package",
+            "version": "[2.0.0, )"
+          },
           "System.Management": {
             "target": "Package",
             "version": "[7.0.2, )"

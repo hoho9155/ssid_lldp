@@ -1,8 +1,27 @@
 ﻿using System.Management;
+using SimpleWifi;
+
 
 
 //SSID
+
+
 Console.WriteLine("SSID List:");
+try
+{
+    var wifi = new Wifi();
+    var accessPoints = wifi.GetAccessPoints();
+    foreach (AccessPoint ap in accessPoints)
+    {
+        Console.WriteLine($"SSID: {ap.Name}");
+    }
+}
+catch (Exception ex)
+{
+    Console.WriteLine(ex.Message);
+}
+
+/*
 try
 {
     String query = "SELECT * FROM MSNDis_80211_BSSIList";
@@ -22,19 +41,31 @@ catch (Exception ex)
 {
     Console.WriteLine(ex.Message);
 }
+*/
 
 //LLDP
 Console.WriteLine("LLDP List:");
-ManagementClass wmiClass = new ManagementClass("root\\StandardCimv2", "MSFT_NetAdapterLldp", null);
-ManagementObjectCollection adapters = wmiClass.GetInstances();
-foreach (ManagementObject adapter in adapters)
-{
-    string chassisId = adapter["ChassisID"].ToString();
-    string portId = adapter["PortID"].ToString();
 
-    Console.WriteLine($"Chassis ID: {chassisId}");
-    Console.WriteLine($"Port ID: {portId}");
+try
+{
+    ManagementClass wmiClass = new ManagementClass("root\\StandardCimv2", "MSFT_NetAdapterLldp", null);
+    ManagementObjectCollection adapters = wmiClass.GetInstances();
+    foreach (ManagementObject adapter in adapters)
+    {
+        string chassisId = adapter["ChassisID"].ToString();
+        string portId = adapter["PortID"].ToString();
+
+        Console.WriteLine($"Chassis ID: {chassisId}");
+        Console.WriteLine($"Port ID: {portId}");
+    }
+    // Clean up the management objects
+    adapters.Dispose();
+    wmiClass.Dispose();
 }
-// Clean up the management objects
-adapters.Dispose();
-wmiClass.Dispose();
+catch (Exception ex)
+{
+    Console.WriteLine(ex.Message);
+}
+
+
+
